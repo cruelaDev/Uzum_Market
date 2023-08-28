@@ -1,15 +1,11 @@
 package org.example.product;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import org.example.common.BaseEntity;
-
-import java.util.Calendar;
 import java.util.UUID;
 
 @Data
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(callSuper = true)
@@ -19,11 +15,8 @@ public class Product extends BaseEntity<UUID> {
     private int quantity;
     private double price;
     private UUID merchantId;
-
 //    todo List<Photo>
-
     private String description;
-
     private double disCountPrice;
 
 }
